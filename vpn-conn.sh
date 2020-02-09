@@ -14,7 +14,7 @@ COUNT=4
 
 DATE=`date "+%Y-%m-%d %H:%M:%S"`
 
-if ! /sbin/ifconfig tun0 | grep -q "00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00"
+if ! /sbin/ifconfig tun0 2> /dev/null | grep -q "00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00"
 then
         echo [$DATE] tun0 down
         sudo $VPNCOM
