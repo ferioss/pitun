@@ -1,9 +1,9 @@
 #!/bin/bash
 # use this file with the following crontab to check the vpn connection every 5 mins:
 # */5 * * * * /path/to/this/file.sh >> /path/to/log/file.log 2>&1
-
 # command to start VPN connection
 VPNCOM="systemctl start openvpn@de434u"
+VPNRST="systemctl restart openvpn@de434u"
 
 # add ip / hostname separated by white space
 #HOSTS="1.2.3.4"
@@ -29,6 +29,6 @@ else
         if [ $totalcount -eq 0 ]
         then
                 echo [$DATE] "ping failed"
-                sudo $VPNCOM
+                sudo $VPNRST
         fi
 fi
