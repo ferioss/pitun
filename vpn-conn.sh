@@ -2,12 +2,12 @@
 # use this file with the following crontab to check the vpn connection every 5 mins:
 # */5 * * * * /path/to/this/file.sh >> /path/to/log/file.log 2>&1
 # command to start VPN connection
-VPNCOM="systemctl start openvpn@de434u"
-VPNRST="systemctl restart openvpn@de434u"
+VPNCOM="systemctl start openvpn@srv"
+VPNRST="systemctl restart openvpn@srv"
 
 # add ip / hostname separated by white space
 #HOSTS="1.2.3.4"
-HOSTS="8.8.8.8 4.2.2.4"
+HOSTS="1.1.1.1 9.9.9.9"
 # no ping request
 totalcount=0
 COUNT=4
